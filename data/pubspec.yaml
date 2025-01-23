@@ -1,0 +1,27 @@
+name: data
+description: Data
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ^3.6.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # BE tools
+  http: ^1.2.2
+  web_socket_channel: ^3.0.1
+
+  # DI
+  get_it: ^8.0.3
+
+  domain:
+    path: ../domain/
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.11
