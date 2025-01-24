@@ -31,8 +31,6 @@ class UseCaseModule {
         GuessTheHouseUseCase(_RepositoryModule.getItem()));
     _getIt.registerSingleton<GetStudentByIdUseCase>(
         GetStudentByIdUseCase(_RepositoryModule.getItem()));
-    _getIt.registerSingleton<GetAttemptsUseCase>(
-        GetAttemptsUseCase(_RepositoryModule.getItem()));
     _getIt.registerSingleton<GetAttemptsMapUseCase>(
         GetAttemptsMapUseCase(_RepositoryModule.getItem()));
     _getIt.registerSingleton<ResetUseCase>(

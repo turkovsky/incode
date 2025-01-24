@@ -21,11 +21,6 @@ class RepositoryImpl implements Repository {
   }
 
   @override
-  List<Attempt> getAttemptsList() {
-    return _localDataSource.getAttempts();
-  }
-
-  @override
   Future<Student> getRandomStudent() async {
     final list = _localDataSource.getStudents();
     if (list.isEmpty) list.addAll(await _apiDataSource.getStudentsList());
@@ -54,10 +49,12 @@ class RepositoryImpl implements Repository {
     final list = _localDataSource.getStudents();
     final attempts = _localDataSource.getAttempts();
     final Map<Attempt, Student> map = {};
-    attempts.forEach((attempt) {
+
+    void addToMap(Attempt attempt) {
       final student = list.firstWhere((e) => e.id == attempt.studentId);
       map[attempt] = student;
-    });
+    }
+    attempts.forEach(addToMap);
     return map;
   }
 

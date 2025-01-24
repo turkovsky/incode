@@ -6,8 +6,10 @@ import 'package:panda/screens/list/list_bloc.dart';
 import 'package:panda/widgets/result_widget.dart';
 
 class ListScreen extends StatefulWidget {
+  const ListScreen({super.key});
+
   @override
-  _ListScreenState createState() => _ListScreenState();
+  State<ListScreen> createState() => _ListScreenState();
 }
 
 class _ListScreenState extends State<ListScreen> {

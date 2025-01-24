@@ -19,7 +19,6 @@ final GoRouter router = GoRouter(
               builder: (ctx, GoRouterState state) {
                 return const HomeScreen();
               },
-              routes: const [],
             )
           ],
         ),
@@ -28,7 +27,6 @@ final GoRouter router = GoRouter(
             GoRoute(
               path: '/list',
               builder: (ctx, GoRouterState state) => ListScreen(),
-              routes: const [],
             )
           ],
         ),

@@ -28,14 +28,6 @@ class GetStudentByIdUseCase {
   Student invoke(String id) => _repository.getStudentById(id);
 }
 
-class GetAttemptsUseCase {
-  final Repository _repository;
-
-  GetAttemptsUseCase(this._repository);
-
-  List<Attempt> invoke() => _repository.getAttemptsList();
-}
-
 class GetAttemptsMapUseCase {
   final Repository _repository;
 

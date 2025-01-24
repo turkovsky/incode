@@ -6,7 +6,6 @@ abstract class Repository {
   Future<Student> getRandomStudent();
   bool guessTheHouse(String studentId, House house);
   Student getStudentById(String id);
-  List<Attempt> getAttemptsList();
   Stream<List<Attempt>> subscribeToAttemptsList();
   Map<Attempt, Student> getAttemptsMap();
   void reset();
